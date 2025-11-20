@@ -1,0 +1,211 @@
+---
+format: html
+editor: visual
+---
+
+***HYDROMANTES PLATYCEPHALUS*** (Mount Lyell Salamander)**. LENTIC HABITAT USE.**
+
+```{r rovito_data}
+#| include: false
+#| code-fold: true
+
+# Load required packages
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+librarian::shelf(DBI, config, connections, here, readr, dplyr, tidyr, stringr, magrittr, geosphere, sf)
+
+# Read and clean Rovito (2010) Appendix CSV file of Hydromantes collection localities
+rovito <- read_csv(here("data", "Rovito_2010_MolecularEcology_appendix.csv")) %>%    # Read CSV file
+  rename_with(~ str_replace_all(tolower(str_trim(.x)), " ", "_")) %>%  # Remove leading/trailing spaces, lowercase, replace spaces with underscores
+  separate_rows(`catalogue_number`, sep = ",\\s*") %>%   # Split by comma
+  mutate(
+    catalogue_number = str_trim(catalogue_number),     # Remove leading/trailing spaces
+    catalogue_number = str_remove_all(catalogue_number, "[^0-9]"), # Keep only digits
+    catalogue_number = as.integer(catalogue_number)  # format as integer
+  ) %>%
+  filter(catalogue_number != "")                         # Drop any empty entries
+
+# Read and clean Arctos CSV file of Hydromantes collection localities
+arctos <- read_csv(here("data", "ArctosData_hydromantes_23oct2025.csv")) %>% # Read CSV file
+  rename_with(~ tolower(str_trim(.x))) %>%  # Remove leading/trailing spaces, lowercase
+  mutate(
+    guid = str_trim(guid),     # Remove leading/trailing spaces
+    guid = str_remove_all(guid, "[^0-9]"), # Keep only digits
+    guid = as.integer(guid),    # format as integer
+    spec_locality = str_replace_all(spec_locality, "Smith's Lake, Desolation Wilderness area", "Smith Lake, Desolation Wilderness area, El Dorado National Forest"), 
+    spec_locality = str_replace_all(spec_locality, "E side Smith Lake, Desolation Wilderness", "East side of Smith Lake, Desolation Wilderness, Eldorado National Forest")
+  ) %>%    # Replace similar descriptions of the same site with identical descriptions
+  filter(guid != "")
+  
+# Create new Arctos table from which Rovito (2010) records are removed
+arctos_norovito <- arctos %>% 
+  anti_join(rovito, join_by(guid == catalogue_number))
+
+# Distinct non-Rovito Arctos localities that are associated with lentic habitats
+arctos_norovito_lentic <- arctos_norovito %>% 
+  filter(str_detect(spec_locality, regex("lake|pond", ignore_case = TRUE))) %>%
+  distinct(spec_locality)
+
+# Distinct Rovito localities that are associated with lentic habitats
+rovito_lentic <- rovito %>% 
+  filter(str_detect(locality, regex("lake|pond", ignore_case = TRUE))) %>%
+  distinct(locality)
+
+# Calculate distances between localities
+locations <- tibble(
+  site = c("coyote", "laurel", "new_range"),
+  x = c(-118.4764, -118.4920, -118.5554),   # Longitude (°)
+  y = c(36.3601, 36.3661, 36.3601)   # Latitude (°)
+)
+
+ref_lon <- -118.5554   # Define a reference point (Bullfrog Lakes)
+ref_lat <- 36.3948   
+
+locations <- locations %>%   # Calculate distance (in meters) from reference point to each site
+  mutate(distance_m = distHaversine(cbind(x, y), c(ref_lon, ref_lat)))
+
+dist_coyote <- round(locations$distance_m[locations$site == "coyote"] / 1000, 1)   # Extract values for inline use
+dist_laurel <- round(locations$distance_m[locations$site == "laurel"] / 1000, 1)
+dist_new_range  <- round(locations$distance_m[locations$site == "new_range"] / 1000, 1)
+```
+
+```{r retrieve_data_from_db}
+#| eval: false
+#| include: false
+#| code-fold: true
+
+# Retrieve lake data from database and convert coordinates to decimal degrees
+Sys.setenv(R_CONFIG_ACTIVE = "slip-eri")
+
+con <- connection_open(RPostgres::Postgres(),
+                       dbname = config::get("dbname"),
+                       host = config::get("host"),
+                       port = config::get("port"),
+                       user = config::get("user"),
+                       password = rstudioapi::askForPassword("password"))
+
+dbExecute(con, "SET search_path TO surveys_samples")
+
+lake_info <- tbl(con, "site") %>% 
+  inner_join(tbl(con, "visit"), by = "site_id") %>% 
+  inner_join(tbl(con, "survey", by = "visit_id")) %>% 
+  filter(
+    site_id %in% c(10114, 20276, 20279, 70413)
+  ) %>% 
+  select(site_id, area, elevation, depth_max, utme, utmn) %>% 
+  collect()
+
+coords <- lake_info %>% 
+  select(site_id, utme, utmn) %>% 
+  st_as_sf(coords = c("utme", "utmn"), crs = 6340) %>% 
+  st_transform(crs = "+proj=longlat +datum=WGS84")
+
+coords$lon <- st_coordinates(coords)[,1]
+coords$lat <- st_coordinates(coords)[,2]
+
+lake_info <- lake_info %>% 
+  inner_join(coords, by = "site_id") %>% 
+  select(-geometry)
+
+lake_info %>% write_csv(here("data", "lake_info.csv"))
+
+connection_close(con) 
+rm(con)
+```
+
+```{r make_lakeinfo_available}
+#| include: false
+#| code-fold: true
+
+lake_info <- read_csv(here("data", "lake_info.csv")) %>% 
+  mutate(
+    area = round((area/10000), 1),
+    across(c("lat", "lon"), ~ formatC(.x, format = "f", 4)) # instead of "round" - to preserve trailing zeros
+  )
+
+info_10114 <- lake_info %>% 
+  filter(site_id == 10114) 
+
+info_20276 <- lake_info %>% 
+  filter(site_id == 20276)
+
+info_20279 <- lake_info %>% 
+  filter(site_id == 20279)
+
+info_70413 <- lake_info %>% 
+  filter(site_id == 70413)
+```
+
+*Hydromantes platycephalus* is endemic to California's Sierra Nevada mountains (USA), where it is found at elevations ranging from 1220 to 3658 m.
+Across its range, it is closely associated with damp, rocky habitats, including talus piles, bedrock outcrops, flat rocks on bedrock or decomposed granite, under rocks at the edge of streams, and in waterfall spray zones (Wake and Papenfuss 2005. *In* Lannoo \[ed.\], Amphibian Declines: The Conservation Status of United States Species, pp. 783--784. University of California Press, Berkeley, California; Hansen and Shedd 2025. California Amphibians and Reptiles. Princeton University Press, Princeton, New Jersey. 520 pp.).
+Despite the abundance of lakes and ponds in the higher elevations of the Sierra Nevada, many with rocky shorelines that seem suitable for *H. platycephalus*, we are not aware of any published accounts describing *H. platycephalus* utilizing lentic habitats.
+Rovito (2010. Mol. Ecol. 19: 4554--4571, Appendix) lists `r n_distinct(rovito$locality)` localities where he collected *H. platycephalus*, 13 of which are described as lakes (e.g., "Peeler Lake", "east side of Vogelsang Lake").
+However, in all such cases, *H. platycephalus* were actually collected from seep habitat on the rocky slopes above the lake (Rovito, pers. comm.).
+In addition, a search of the Arctos online collection management system (https://arctos.database.museum/; 23 October 2025), a database that includes over 5 million records from natural and cultural history collections, produced `r nrow(arctos)` *H. platycephalus* records from `r n_distinct(arctos$spec_locality)` distinct localities.
+After removing the Rovito (2010, *op. cit.*) localities, only six of `r n_distinct(arctos_norovito$spec_locality)` localities (`r round(6/((n_distinct(arctos_norovito$spec_locality)))*100)`%) are attributed to lentic habitats.
+As in Rovito (2010, *op. cit.*), for most or all of these locality descriptions, it is likely that a lake name was used as a general locator, but that the *H. platycephalus* specimens were actually collected from a nearby non-lentic habitat.
+
+Here, we provide the first unambiguous description of *H. platycephalus* occupying lake habitats.
+Our observations were made in three distinct areas of the Sierra Nevada, including one each in Yosemite, Kings Canyon, and Sequoia National Parks.
+The diurnal and nocturnal surveys we employed in all three areas were conducted similarly, with surveyors walking slowly along the lake shore and inlet/outlet streams, and searching all habitats encountered, including rock crevices, overhanging banks, and sandy beaches.
+The surveyed lakes are typical of those found at high elevations in the Sierra Nevada, having shorelines composed almost entirely of granite or metavolcanic bedrock and boulder, interspersed with short stretches of sandy beach or overhanging banks covered with meadow vegetation.
+All lakes included in this study are located west of the Sierra Nevada crest.
+
+In Yosemite National Park, in 2024, we surveyed an unnamed lake south of Mount Lyell (Lake ID = 70413; `r info_70413$lat`°N, `r info_70413$lon`°W; WGS 84; `r info_70413$elevation` m elev.) for *H. platycephalus*.
+This lake is located in the headwaters of the Lyell Fork of the Merced River, and has a surface area of `r info_70413$area` ha and a maximum depth of `r info_70413$depth_max` m.
+On 22 July 2024, PL and GL conducted a nocturnal survey (2130--2245 h) of 70413, including the talus habitat above the lake, and the northern inlet and northwestern shoreline of the lake itself.
+In the first 150 m of the inlet, we observed 11 adult *H. platycephalus* in bedrock, talus, moss, and meadow habitats bordering the creek.
+No individuals were observed in the talus habitat above the lake or along the northwestern lake shore.
+On 23 July 2024, PL conducted a nocturnal survey of the entire shoreline of 70413 and associated inlet and outlet streams (2150--0200 h).
+No *H. platycephalus* were observed along the northern inlet where they were seen the previous night.
+However, a single *H. platycephalus* was observed on the northern shoreline, on a vegetated bank within 1 m of the lake.
+
+In 2025, PL, GL, and LW again searched 70413 for *H. platycephalus*.
+On 18 August 2025, during a diurnal survey of the lake shore and associated inlet and outlet streams (1250--1750 h), no *H. platycephalus* were seen.
+On 19 August 2025, we conducted a nocturnal survey (2100--2230 h) of the northern inlet and the northern lake shore.
+Two *H. platycephalus* were observed in the first 100 m of the inlet.
+On the northern lake shore, we found \> 60 *H. platycephalus* (Fig. 1).
+Nearly all were observed on moss, in meadow vegetation, or at the base of a grassy bank along a sandy beach, and within 0--0.5 m of the lake.
+
+Notably, of these ca.
+60 *H. platycephalus*, three individuals were found submerged in nearshore portions of the lake.
+All three *H. platycephalus* were alive, as evidenced by their movement when in the beam of a headlamp.
+
+In Kings Canyon National Park, in 2025, PL and GL surveyed an unnamed lake west of Mount Goddard (Lake ID = 10114; `r info_10114$lat`°N, `r info_10114$lon`°W; WGS 84; `r info_10114$elevation` m elev.).
+This lake is at the headwaters of the South Fork San Joaquin River, and has a surface area of `r info_10114$area` ha and a maximum depth of `r info_10114$depth_max` m.
+During diurnal surveys of 10114 conducted on 08 August and 09 August 2025 (1140--1710 h and 1050--1320 h, respectively) of the entire lake shoreline and associated inlets and outlets, we found a total of 7 *H. platycephalus* 20--50 m up the northeastern inlet (5 on 08 August, 2 on 09 August 2025).
+During a nocturnal survey on 08 August 2025 (2120--2330 h) of the entire lake shoreline and northeastern inlet, we observed two *H. platycephalus* in the northeastern inlet and three on the lake shoreline.
+Of the three *H. platycephalus* found along the shoreline, two were under an overhanging grassy bank within 0--1 m of the lake and one was approximately 5 m from the lake shore on a dry, vegetated slope.
+
+In Sequoia National Park, on 06 August 2011 (2030--2130 h), RK searched for *H. platycephalus* in seeps flowing over granite outcrops above and ca.
+300 m west of an unnamed lake (Lake ID = 20279; `r info_20279$lat`°N, `r info_20279$lon`°W; WGS 84; `r info_20279$elevation` m elev.) located in the headwaters of Coyote Creek.
+On 07 August 2011 (ca. 2100 h), RK searched similar habitat above and ca.
+300 m west of an unnamed lake (Lake ID = 20276; `r info_20276$lat`°N, `r info_20276$lon`°W; WGS 84; `r info_20276$elevation` m elev.) located in the headwaters of Laurel Creek.
+Coyote and Laurel Creeks are tributaries of the Kern River.
+Despite the searched sites being `r dist_coyote` km and `r dist_laurel` km, respectively, southeast of the southernmost known *H. platycephalus* locality west of the Sierra Nevada crest (Wake and Papenfuss 2005, *op. cit.*), 5--10 *H. platycephalus* were found at each location.
+The Laurel Creek area was surveyed again in 2024 (by FP and RK) and 2025 (by JS and RK), with a focus on Lake 20276.
+Lake 20276 has a surface area of `r info_20276$area` ha and a maximum depth of `r info_20276$depth_max` m.
+During 14--16 July 2024, we conducted one diurnal survey (0910--1210 h) and two nocturnal surveys (2130--2315 h) of the entire shoreline and associated inlet and outlet streams of 20276, and one nocturnal survey of the original bedrock outcrop locality (ca. 2200 h).
+During the diurnal survey of 20276, no *H. platycephalus* were found.
+During the two nocturnal surveys of 20276, we observed a total of 9 *H. platycephalus* (2 on 15 July, 7 on 16 July), all on the northeast shore.
+We found no *H. platycephalus* during the nocturnal survey of the original outcrop locality.
+In 2025, we repeated this survey, conducting one diurnal survey (12 July, 0900--1110 h) and two nocturnal surveys of the entire shoreline of 20276 (12 July, 2130--2345 h; 13 July, 2140--2310 h), and one nocturnal survey of the original outcrop locality (13 July, 2315--2345 h).
+Again, we found no *H. platycephalus* during the diurnal survey of 20276 or the nocturnal survey of the original outcrop locality.
+However, we observed 20--30 *H. platycephalus* during each of the two nocturnal surveys of 20276, concentrated on the southeast and northeast shorelines.
+In both years, *H*.
+*platycephalus* were observed on wet rocks and moss on the shore within 0--1 m of the lake.
+
+Our observations of *H. platycephalus* indicate that, in addition to the known association of *H. platycephalus* with upland habitats in the Sierra Nevada, the species also utilizes lake shore habitats and even underwater littoral habitats of lakes.
+The unusually high abundance of *H. platycephalus* we observed along lake shores during some surveys suggests the previously unrecognized importance of these lentic habitats for this poorly-understood species.
+For *H. platycephalus* west of the Sierra Nevada crest, our observations in Sequoia National Park also extend the known range of *H. platycephalus* south by `r dist_new_range` km.
+This suggests the need for additional surveys of suitable habitats in this area to better describe the range of *H. platycephalus* in the southernmost Sierra Nevada.
+
+[FIG. 1]{.smallcaps}.
+Seven adult *Hydromantes platycephalus* observed along the shoreline of lake 70413 in Yosemite National Park, USA during a nocturnal survey on 19 August 2025.
+Each salamander is indicated with a black arrow.
+The lake is visible in the immediate foreground.
+
+**PARKER R. LAND** (email: parkerland29\@gmail.com), **GEORGIA Q. LATTIG** (email: glattig24\@coa.edu), and **LEONIE M. WALDERICH**, Sierra Nevada Aquatic Research Laboratory, University of California, Mammoth Lakes, California 93546, USA & Earth Research Institute, University of California, Santa Barbara, California 93106, USA.
+**JACOB W. STAINES**, Resilience Institute Bridging Biological Training and Research, Quito, Ecuador; **FOREST D. PERI** and **ROLAND A. KNAPP**, Sierra Nevada Aquatic Research Laboratory, University of California, Mammoth Lakes, California 93546, USA & Earth Research Institute, University of California, Santa Barbara, California 93106, USA (email: roland.knapp\@ucsb.edu).
