@@ -3,8 +3,6 @@ format:
   revealjs:
     theme: dark
     slide-number: true
-    css: styles.css
-    auto-stretch: false
 editor: visual
 ---
 
@@ -17,7 +15,7 @@ editor: visual
 Parker Land\
 [Sierra Nevada Aquatic Research Laboratory, Mammoth Lakes, California]{style="font-size: 0.4em"}
 
-## Natural History
+## Natural History {style="font-size: 0.8em"}
 
 <hr color = #0a62a6>
 
@@ -25,7 +23,7 @@ Parker Land\
 ::: column
 -   Endemic to the Sierra Nevada
 -   One of the highest elevation salamanders in the world (Potluck Pass locality \~12,150ft)
--   Known to inhabit upland seeps, stream margins, and waterfall spray zones
+-   Known to inhabit upland seeps and springs, stream margins, and waterfall spray zones
 :::
 
 ::: column
@@ -33,11 +31,18 @@ Parker Land\
 :::
 :::::
 
-## Our Sites
+## *H. platycephalus* localities and our sites {style="font-size: 0.8em"}
 
 <hr color = #0a62a6>
 
-## South Lyell Basin, Yosemite National Park
+
+::: {.r-stack}
+![](images/hypl_map_nosites.png){width="500px"}
+
+![](images/hypl_map_sites.png){.fragment width="500px"}
+:::
+
+## South Lyell Basin, Yosemite National Park {style="font-size: 0.8em"}
 
 <hr color = #0a62a6>
 
@@ -53,20 +58,21 @@ Parker Land\
 :::
 :::::
 
-## Embedded Video
+##
 
 <hr color = #0a62a6>
 
-{{< video LyellVideo.mp4 >}}
+{{< video images/LyellVideo.mp4 >}}
 
-## Goddard Plateau, Kings Canyon National Park
+## Goddard Plateau, Kings Canyon National Park {style="font-size: 0.8em"}
 
 <hr color = #0a62a6>
 
 ::::: columns
 ::: column
--   Nocturnal survey of entire lakeshore and inlets
+-   Nocturnal survey of entire lake shore, inlet and outlets
 -   Two individuals observed on the of the lake's overhanging vegetated bank
+-   Additionally, one was observed \~5m from the lake in a dry meadow habitat
 :::
 
 ::: column
@@ -74,15 +80,15 @@ Parker Land\
 :::
 :::::
 
-## Laurel Lakes, Sequoia National Park
+## Laurel Lakes, Sequoia National Park {style="font-size: 0.8em"}
 
 <hr color = #0a62a6>
 
 ::::: columns
 ::: column
--   
-
--   
+-   In 2024, 9 individuals were observed on the northeast shoreline
+-   In 2025, 20-30 individuals were observed on southeast shoreline
+-   In both instances, *H. platycephalus* were found on wet rocks and moss within 0-1m of the lake
 :::
 
 ::: column
@@ -90,8 +96,10 @@ Parker Land\
 :::
 :::::
 
-## 
+## Key Takeaways {style="font-size: 0.8em"}
 
--   *H. platycephalus* occupies lakeshores and even underwater littoral habitats
--   The high abundances observed during some surveys (\>60 individuals in one instance) suggest suggests there is an unrecognized importance of lentic habitats for this poorly understood species
--   Observations in the Laurel Creek drainage, and earlier observations in the Coyote Creek drainage, extend the southern range west of the crest for this species by 3.9km
+<hr color = #0a62a6>
+
+-   [*H. platycephalus* occupy lakeshores and even underwater littoral habitats]{style="font-size: 0.8em"}
+-   [The high abundances observed during some surveys (\>60 individuals in one instance) suggests there is an unrecognized importance of lentic habitats for this species]{style="font-size: 0.8em"}
+-   [Observations in the Laurel Creek and Coyote Creek drainages extend the southern range west of the crest for this species by \~4km]{style="font-size: 0.8em"} ![](images/ThreeSalamanders.jpeg) {width=100px}
