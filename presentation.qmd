@@ -29,12 +29,18 @@ editor: visual
 
 :::::: {style="margin-top: -10px;"}
 ::::: columns
-::: {.column width="50%" style="font-size: 1.3em; padding-top: 20px;"}
+::: {.column width="50%" style="font-size: 1em; padding-top: 20px;"}
+*Hydromantes platycephalus*
+
 - Family: Plethodontidae
-- Genus: Hydromantes
+- Genus: *Hydromantes*
 - Endemic to the Sierra Nevada
+- Unique adaptations
 - Wide elevational distribution
-- Inhabits upland seeps and springs, stream margins, and waterfall spray zones
+- Habitat: 
+  - Upland seeps and springs
+  - stream margins 
+  - waterfall spray zones
 :::
 
 ::: {.column width="50%" style="padding-top: 10px"}
@@ -62,7 +68,7 @@ editor: visual
 
 ::: {style="font-size: 0.87em; margin-bottom: 10px;"}
 - **60 *H. platycephalus*** along northern lakeshore, including **3 submerged** in lake.
-- Found 0–0.5 m from lake, on moss, in meadow vegetation, and under overhanging banks on sand.
+- Found 0–0.5 m from lake on moss, in meadow vegetation, and on sand.
 - 2 salamanders found along inlet stream in 2025, 11 found in 2024.
 :::
 
@@ -82,7 +88,7 @@ editor: visual
 
 {{< video images/LyellVideo.mp4 >}}
 
-## Underwater lentic habitat use {style="font-size: 0.8em"}
+## Littoral habitat use {style="font-size: 0.8em"}
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
