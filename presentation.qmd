@@ -111,7 +111,7 @@ editor: visual
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.95em; margin-bottom: 10px;"}
--   **2 *H. platycephalus*** observed along lakeshore.
+-   **2 *H. platycephalus*** observed along northern lakeshore.
 -   Within 0-0.5m of water on edge of vegetated bank.
 -   6-7 individuals flipped along inlet stream during day and night.
 :::
