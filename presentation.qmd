@@ -132,8 +132,8 @@ editor: visual
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.95em; margin-bottom: 0px;"}
-- **20-30 *H. platycephalus*** observed on southeast shoreline in 2025.
-- **9 individuals** observed on the northeast shoreline in 2024.
+- **9 *H. platycephalus*** observed on the northeast shoreline in 2024.
+- **20-30 individuals** observed on southeast shoreline in 2025.
 - In both instances, *H. platycephalus* were found on wet rocks and moss within 0-1m of the lake.
 :::
 
