@@ -35,7 +35,6 @@ editor: visual
 - Family: Plethodontidae
 - Genus: *Hydromantes*
 - Endemic to the Sierra Nevada
-- Unique adaptations
 - Wide elevational distribution
 - Habitat: 
   - Upland seeps and springs
