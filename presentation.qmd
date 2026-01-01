@@ -65,8 +65,8 @@ editor: visual
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.87em; margin-bottom: 10px;"}
-- **60 *H. platycephalus*** along northern lakeshore, including **3 submerged** in lake.
-- Found 0–0.5 m from lake on moss, in meadow vegetation, and on sand.
+- **>60 *H. platycephalus*** along northern lakeshore, including **3 submerged** in lake.
+- Found 0–0.5 m from lake on moss, in meadow vegetation, and on sand below bank.
 - 2 salamanders found along inlet stream in 2025, 11 found in 2024.
 :::
 
@@ -90,7 +90,7 @@ editor: visual
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-- 3 *H. platycephalus* observed submerged in the lake at South Lyell
+- **3 *H. platycephalus*** submerged in the lake at South Lyell
 
 :::::: columns
 ::: {.column width="33%"}
@@ -111,9 +111,9 @@ editor: visual
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.95em; margin-bottom: 10px;"}
--   **2 *H. platycephalus*** observed along northern lakeshore.
--   Within 0-0.5m of water on edge of vegetated bank.
--   6-7 individuals flipped along inlet stream during day and night.
+-   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore
+-   Within 0-0.5m of water on edge of vegetated bank
+-   6-7 individuals flipped along inlet stream during day and night
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
@@ -131,8 +131,8 @@ editor: visual
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.95em; margin-bottom: 0px;"}
-- **9 *H. platycephalus*** observed on the northeast shoreline in 2024.
-- **20-30 individuals** observed on southeast shoreline in 2025.
+- **9 *H. platycephalus*** on the northeast shoreline in 2024.
+- **20-30 individuals** on southeast shoreline in 2025.
 - In both instances, *H. platycephalus* were found on wet rocks and moss within 0-1m of the lake.
 :::
 
