@@ -1,6 +1,7 @@
 ---
 format: 
   revealjs:
+    self-contained: true
     theme: dark
     slide-number: true
     include-in-header:
@@ -84,7 +85,7 @@ editor: visual
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-{{< video images/LyellVideo.mp4 >}}
+{{< video https://youtu.be/fD-zZJdQlHw?si=w5kscIwMKc374fK8 width="1000" height="550">}}
 
 ## Littoral habitat use {style="font-size: 0.8em"}
 
