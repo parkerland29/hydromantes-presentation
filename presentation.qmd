@@ -20,7 +20,7 @@ editor: visual
 
 \
 
-**Parker R. Land**^1^, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Staines^2^, Forest D. Peri^2^, Roland A. Knapp^1,2^\
+Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Staines^2^, Forest D. Peri^2^, Roland A. Knapp^1,2^\
 ^[1]{style="font-size: 0.5em"}^[Sierra Nevada Aquatic Research Laboratory, Mammoth Lakes, California]{style="font-size: 0.5em"}\
 ^[2]{style="font-size: 0.5em"}^[Resilience Institute Bridging Biological Training and Research, Quito, Ecuador]{style="font-size: 0.5em"}
 
@@ -38,7 +38,7 @@ editor: visual
 - Endemic to the Sierra Nevada
 - Wide elevational distribution
 - Habitat: 
-  - Upland seeps and springs
+  - seeps, talus fields
   - stream margins 
   - waterfall spray zones
 :::
@@ -112,9 +112,9 @@ editor: visual
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.95em; margin-bottom: 10px;"}
--   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore
--   Within 0-0.5m of water on edge of vegetated bank
--   6-7 individuals flipped along inlet stream during day and night
+-   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore.
+-   Within 0-0.5m of water on edge of vegetated bank.
+-   6-7 individuals flipped along inlet stream during day and night.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
