@@ -34,32 +34,35 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 *Hydromantes platycephalus*
 
 - Family: Plethodontidae
-- Genus: *Hydromantes*
 - Endemic to the Sierra Nevada
 - Wide elevational distribution
-- Habitat: 
-  - seeps, talus fields
-  - stream margins 
-  - waterfall spray zones
+- Habitat: seeps, stream margins, waterfall spray zones
 :::
 
 ::: {.column width="50%" style="padding-top: 10px"}
-![](images/Lyell.jpeg){fig-align="center"}
+![](images/Lyell.jpeg){fig-align="center" height=350px}
 ![](images/LaurelSalamandercrop.jpg){fig-align="center" style="width: 100%; max-height: 275px; object-fit: contain; margin-top: 0px;"}
 :::
 :::::
 ::::::
 
 
-## *H. platycephalus* localities and our sites {style="font-size: 0.8em"}
+## Known *H. platycephalus* localities {.center style="font-size: 0.8em"}
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
+::::: columns
+::: {.column width="50%"}
 ::: r-stack
-![](images/hypl_map_nosites.png){width="500px"}
+![](images/hypl_map_nosites.png){height="550px" style="vertical-align: top;"}
 
-![](images/hypl_map_sites.png){.fragment width="500px"}
+![](images/hypl_map_sites.png){.fragment height="550px" style="vertical-align: top;"}
 :::
+:::
+::: {.column width="50%"}
+![](images/GoddardSalamander2.jpeg){height="500px" style="vertical-align: top;"}
+:::
+:::::
 
 ## South Lyell Basin, Yosemite National Park {style="font-size: 0.8em"}
 
@@ -67,7 +70,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 
 ::: {style="font-size: 0.87em; margin-bottom: 10px;"}
 - **>60 *H. platycephalus*** along northern lakeshore, including **3 submerged** in lake.
-- Found 0–0.5 m from lake on moss, in meadow vegetation, and on sand below bank.
+- Found 0–0.5 m from lake: on moss, in meadow vegetation, under banks.
 - 2 salamanders found along inlet stream in 2025, 11 found in 2024.
 :::
 
@@ -91,7 +94,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-- **3 *H. platycephalus*** submerged in the lake at South Lyell
+- **3 *H. platycephalus*** submerged in the lake at South Lyell.
 
 :::::: columns
 ::: {.column width="33%"}
@@ -113,8 +116,8 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 
 ::: {style="font-size: 0.95em; margin-bottom: 10px;"}
 -   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore.
--   Within 0-0.5m of water on edge of vegetated bank.
--   6-7 individuals flipped along inlet stream during day and night.
+-   Found 0-0.5m from lake: on edge of vegetated bank.
+-   6-7 individuals under rocks along inlet stream during.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
@@ -134,7 +137,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 ::: {style="font-size: 0.95em; margin-bottom: 0px;"}
 - **9 *H. platycephalus*** on the northeast shoreline in 2024.
 - **20-30 individuals** on southeast shoreline in 2025.
-- In both instances, *H. platycephalus* were found on wet rocks and moss within 0-1m of the lake.
+- Found 0-1m from lake: on wet rocks and moss.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
@@ -154,8 +157,8 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 
 :::{.incremental}
 - [*Hydromantes platycephalus* inhabits lakeshores and even underwater littoral habitats.]{style="font-size: 1.1em"}
-- [Previously unrecognized importance of lentic habitats for this species]{style="font-size: 1.1em"}
-- [~4km southern range extension for the species west of the Sierra crest]{style="font-size: 1.1em"}
+- [Previously unrecognized importance of lentic habitats for this species.]{style="font-size: 1.1em"}
+- [~4km southern range extension west of Sierra crest.]{style="font-size: 1.1em"}
 :::
 
 ![](images/ThreeSalamanders.jpg){fig-align="center" width="500px"}
