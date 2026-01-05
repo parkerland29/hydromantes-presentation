@@ -117,7 +117,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 ::: {style="font-size: 0.95em; margin-bottom: 10px;"}
 -   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore.
 -   Found 0-0.5m from lake: on edge of vegetated bank.
--   6-7 individuals under rocks along inlet stream during.
+-   6-7 individuals under rocks along inlet stream.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
@@ -158,7 +158,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 :::{.incremental}
 - [*Hydromantes platycephalus* inhabits lakeshores and even underwater littoral habitats.]{style="font-size: 1.1em"}
 - [Previously unrecognized importance of lentic habitats for this species.]{style="font-size: 1.1em"}
-- [~4km southern range extension west of Sierra crest.]{style="font-size: 1.1em"}
+- [~4 km southern range extension west of Sierra crest.]{style="font-size: 1.1em"}
 :::
 
 ![](images/ThreeSalamanders.jpg){fig-align="center" width="500px"}
