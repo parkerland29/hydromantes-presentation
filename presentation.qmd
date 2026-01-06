@@ -114,7 +114,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-::: {style="font-size: 0.95em; margin-bottom: 10px;"}
+::: {style="font-size: 0.95em; margin-bottom: 0px;"}
 -   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore.
 -   Found 0-0.5m from lake: on edge of vegetated bank.
 -   6-7 individuals under rocks along inlet stream.
