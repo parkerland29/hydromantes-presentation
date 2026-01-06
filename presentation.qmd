@@ -14,7 +14,7 @@ format:
 editor: visual
 ---
 
-## First description of Mount Lyell salamanders (*Hydromantes platycephalus*) occupying lakes in California's Sierra Nevada mountains {style="font-size: 0.8em"}
+## The first description of Mount Lyell salamanders (*Hydromantes platycephalus*) occupying lakes in California's Sierra Nevada mountains {style="font-size: 0.78em"}
 
 <hr color = #0a62a6>
 
