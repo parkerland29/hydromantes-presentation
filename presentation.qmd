@@ -88,7 +88,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-{{< video https://youtu.be/fD-zZJdQlHw?si=w5kscIwMKc374fK8 width="1000" height="550">}}
+{{< video https://youtu.be/fD-zZJdQlHw?si=w5kscIwMKc374fK8&rel=0 width="1000" height="550">}}
 
 ## Littoral habitat use {style="font-size: 0.8em"}
 
