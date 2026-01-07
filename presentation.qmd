@@ -1,7 +1,7 @@
 ---
 format: 
   revealjs:
-    self-contained: true
+    embed-resources: false
     theme: dark
     slide-number: true
     include-in-header:
@@ -11,7 +11,6 @@ format:
             color: #32c2e6 !important;
           }
           </style>
-          <meta name="referrer" content="strict-origin-when-cross-origin">
 editor: visual
 ---
 
@@ -126,7 +125,12 @@ Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stai
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-{{< video https://youtu.be/fD-zZJdQlHw?si=w5kscIwMKc374fK8&rel=0 width="1000" height="550" >}}
+<div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+  <video width="1000" height="550" controls muted style="display: block; margin: 0 auto;">
+    <source src="images/LyellVideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ## Littoral habitat use {style="font-size: 0.8em"}
 
