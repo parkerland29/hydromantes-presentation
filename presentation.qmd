@@ -20,7 +20,7 @@ editor: visual
 
 \
 
-Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Staines^2^, Forest D. Peri^2^, Roland A. Knapp^1,2^\
+Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Staines^2^, Forest D. Peri^2^, Roland A. Knapp^1,2^\
 ^[1]{style="font-size: 0.5em"}^[Sierra Nevada Aquatic Research Laboratory, Mammoth Lakes, California]{style="font-size: 0.5em"}\
 ^[2]{style="font-size: 0.5em"}^[Resilience Institute Bridging Biological Training and Research, Quito, Ecuador]{style="font-size: 0.5em"}
 
@@ -33,45 +33,79 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 ::: {.column width="50%" style="font-size: 1em; padding-top: 20px;"}
 *Hydromantes platycephalus*
 
-- Family: Plethodontidae
-- Endemic to the Sierra Nevada
-- Wide elevational distribution
-- Habitat: seeps, stream margins, waterfall spray zones
+-   Family: Plethodontidae
+-   Endemic to the Sierra Nevada
+-   Wide elevational distribution
+-   Habitat: seeps, stream margins, waterfall spray zones
 :::
 
 ::: {.column width="50%" style="padding-top: 10px"}
-![](images/Lyell.jpeg){fig-align="center" height=350px}
-![](images/LaurelSalamandercrop.jpg){fig-align="center" style="width: 100%; max-height: 275px; object-fit: contain; margin-top: 0px;"}
+![](images/Lyell.jpeg){fig-align="center" height="350px"} ![](images/LaurelSalamandercrop.jpg){fig-align="center" style="width: 100%; max-height: 275px; object-fit: contain; margin-top: 0px;"}
 :::
 :::::
 ::::::
 
 
-## Known *H. platycephalus* localities {.center style="font-size: 0.8em"}
+## Conventional habitats {style="font-size: 0.8em;"}
+
+<hr color="#0a62a6" style="margin-top: 0; margin-bottom: 5px;">
+
+::: {style="display: grid; grid-template-columns: auto 1fr 1fr; align-items: start; width: 100%;"}
+
+::: {style="padding-top: 10px; padding-right: 30px; white-space: nowrap;"}
+- Seeps
+- Talus fields
+- Streamsides
+- Spray zones
+:::
+
+::: {style="display: grid; grid-template-rows: auto auto; gap: 4px; padding-left: 20px;"}
+![](images/talus.jpg){style="width: 100%; height: 43vh; object-fit: cover; margin: 0;"}
+![](images/Seep.jpg){style="width: 100%; height: 43vh; object-fit: cover; margin: 0;"}
+:::
+
+::: {style="display: grid; grid-template-rows: auto auto; gap: 4px; padding-left: 10px;"}
+![](images/waterfall.jpg){style="width: 100%; height: 43vh; object-fit: cover; margin: 0;"}
+![](images/stream.jpg){style="width: 100%; height: 43vh; object-fit: cover; margin: 0;"}
+:::
+
+:::
+
+
+## Conventional habitats {style="font-size: 0.8em"}
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-::::: columns
-::: {.column width="50%"}
+- Lake shorelines
+
+![](images/surveyors.jpeg){fig-align="center" height="500px"}
+
+## Known *H. platycephalus* localities {style="font-size: 0.8em"}
+
+<hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
+
+:::::: columns
+:::: {.column width="50%"}
 ::: r-stack
 ![](images/hypl_map_nosites.png){height="550px" style="vertical-align: top;"}
 
 ![](images/hypl_map_sites.png){.fragment height="550px" style="vertical-align: top;"}
 :::
-:::
+::::
+
 ::: {.column width="50%"}
 ![](images/GoddardSalamander2.jpeg){height="500px" style="vertical-align: top;"}
 :::
-:::::
+::::::
 
 ## South Lyell Basin, Yosemite National Park {style="font-size: 0.8em"}
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.87em; margin-bottom: 10px;"}
-- **>60 *H. platycephalus*** along northern lakeshore, including **3 submerged** in lake.
-- Found 0–0.5 m from lake: on moss, in meadow vegetation, under banks.
-- 2 salamanders found along inlet stream in 2025, 11 found in 2024.
+-   **\>60 *H. platycephalus*** along northern lakeshore, including **3 submerged** in lake.
+-   Found 0–0.5 m from lake: on moss, in meadow vegetation, under banks.
+-   2 salamanders found along inlet stream in 2025, 11 found in 2024.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
@@ -80,7 +114,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 :::
 
 ::: {.column width="50%"}
-![](images/surveyors.jpeg){fig-align="center"}
+![](images/lakeshore.jpeg){fig-align="center"}
 :::
 :::::
 
@@ -94,7 +128,7 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-- **3 *H. platycephalus*** submerged in the lake at South Lyell.
+-   **3 *H. platycephalus*** submerged in the lake at South Lyell.
 
 :::::: columns
 ::: {.column width="33%"}
@@ -135,9 +169,9 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.95em; margin-bottom: 0px;"}
-- **9 *H. platycephalus*** on the northeast shoreline in 2024.
-- **20-30 individuals** on southeast shoreline in 2025.
-- Found 0-1m from lake: on wet rocks and moss.
+-   **9 *H. platycephalus*** on the northeast shoreline in 2024.
+-   **20-30 individuals** on southeast shoreline in 2025.
+-   Found 0-1m from lake: on wet rocks and moss.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
@@ -150,15 +184,14 @@ Parker R. Land^1^*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stain
 :::
 :::::
 
-
 ## Key Takeaways {style="font-size: 0.8em"}
 
 <hr color = #0a62a6>
 
-:::{.incremental}
-- [*Hydromantes platycephalus* inhabits lakeshores and even underwater littoral habitats.]{style="font-size: 1.1em"}
-- [Previously unrecognized importance of lentic habitats for this species.]{style="font-size: 1.1em"}
-- [~4 km southern range extension west of Sierra crest.]{style="font-size: 1.1em"}
+::: incremental
+-   [*Hydromantes platycephalus* inhabits lakeshores and even underwater littoral habitats.]{style="font-size: 1.1em"}
+-   [Previously unrecognized importance of lentic habitats for this species.]{style="font-size: 1.1em"}
+-   [\~4 km southern range extension west of Sierra crest.]{style="font-size: 1.1em"}
 :::
 
 ![](images/ThreeSalamanders.jpg){fig-align="center" width="500px"}
