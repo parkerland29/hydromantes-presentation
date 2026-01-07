@@ -11,6 +11,7 @@ format:
             color: #32c2e6 !important;
           }
           </style>
+          <meta name="referrer" content="strict-origin-when-cross-origin">
 editor: visual
 ---
 
@@ -33,10 +34,11 @@ Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stai
 ::: {.column width="50%" style="font-size: 1em; padding-top: 20px;"}
 *Hydromantes platycephalus*
 
--   Family: Plethodontidae
--   Endemic to the Sierra Nevada
--   Wide elevational distribution
--   Habitat: seeps, stream margins, waterfall spray zones
+- Family: Plethodontidae
+- Genus: Hydromantes
+- Endemic to the Sierra Nevada
+- Wide elevational distribution
+
 :::
 
 ::: {.column width="50%" style="padding-top: 10px"}
@@ -53,10 +55,12 @@ Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stai
 ::: {style="display: grid; grid-template-columns: auto 1fr 1fr; align-items: start; width: 100%;"}
 
 ::: {style="padding-top: 10px; padding-right: 30px; white-space: nowrap;"}
-- Seeps
+
 - Talus fields
-- Streamsides
 - Spray zones
+- Seeps
+- Streamsides
+
 :::
 
 ::: {style="display: grid; grid-template-rows: auto auto; gap: 4px; padding-left: 20px;"}
@@ -103,9 +107,9 @@ Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stai
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.87em; margin-bottom: 10px;"}
+-   2 salamanders found along inlet stream in 2025, 11 found in 2024.
 -   **\>60 *H. platycephalus*** along northern lakeshore, including **3 submerged** in lake.
 -   Found 0–0.5 m from lake: on moss, in meadow vegetation, under banks.
--   2 salamanders found along inlet stream in 2025, 11 found in 2024.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
@@ -122,7 +126,7 @@ Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stai
 
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
-{{< video https://youtu.be/fD-zZJdQlHw?si=w5kscIwMKc374fK8&rel=0 width="1000" height="550">}}
+{{< video https://youtu.be/fD-zZJdQlHw?si=w5kscIwMKc374fK8&rel=0 width="1000" height="550" >}}
 
 ## Littoral habitat use {style="font-size: 0.8em"}
 
@@ -149,14 +153,14 @@ Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stai
 <hr color="#0a62a6" style="margin-top: 0; margin-bottom: 20px;">
 
 ::: {style="font-size: 0.95em; margin-bottom: 0px;"}
--   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore.
--   Found 0-0.5m from lake: on edge of vegetated bank.
 -   6-7 individuals under rocks along inlet stream.
+-   **2 *H. platycephalus*** along northern lakeshore, **1** on southern shore.
+-   Found 0-1m from lake: on edge of vegetated bank.
 :::
 
 ::::: {.columns style="display: flex; align-items: center;"}
 ::: {.column width="60%"}
-![](images/Goddard.jpeg){fig-align="center" height="400px"}
+![](images/Goddard2.jpg){fig-align="center" height="400px"}
 :::
 
 ::: {.column width="40%"}
@@ -180,18 +184,18 @@ Parker R. Land^1^\*, Georgia Q. Lattig^1^, Leonie M. Walderich^1^, Jacob W. Stai
 :::
 
 ::: {.column width="50%"}
-![](images/LaurelSalamander3.jpeg){fig-align="center"}
+![](images/LaurelSalamander2.jpg){fig-align="center"}
 :::
 :::::
 
-## Key Takeaways {style="font-size: 0.8em"}
+## Conclusions {style="font-size: 0.8em"}
 
-<hr color = #0a62a6>
+<hr color = #0a62a6 style="margin-top: 0; margin-bottom: 20px;">
 
 ::: incremental
 -   [*Hydromantes platycephalus* inhabits lakeshores and even underwater littoral habitats.]{style="font-size: 1.1em"}
--   [Previously unrecognized importance of lentic habitats for this species.]{style="font-size: 1.1em"}
 -   [\~4 km southern range extension west of Sierra crest.]{style="font-size: 1.1em"}
+-   [Unanswered questions remain.]{style="font-size: 1.1em"}
 :::
 
 ![](images/ThreeSalamanders.jpg){fig-align="center" width="500px"}
